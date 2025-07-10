@@ -64,32 +64,88 @@
   <div id="ending"></div>
 
   <script>
-    const storyData = [
-      {
-        text: "你是個國小生。今天放學後你決定...",
-        options: [
-          { text: "狂打電動12小時", effect: { knowledge: 0, happy: 3, money: -1 } },
-          { text: "回家寫作業配抄答案", effect: { knowledge: 2, happy: 0, money: 1 } },
-          { text: "做家事跟媽媽要零用錢", effect: { knowledge: 1, happy: 1, money: 3 } }
-        ]
-      },
-      {
-        text: "你參加了校外才藝班，決定學習...",
-        options: [
-          { text: "鋼琴", effect: { knowledge: 2, happy: 1, money: -1 } },
-          { text: "籃球", effect: { knowledge: 1, happy: 2, money: -1 } },
-          { text: "沒興趣，不去", effect: { knowledge: 0, happy: 0, money: 2 } }
-        ]
-      },
-      {
-        text: "國高中時，你的志向是...",
-        options: [
-          { text: "想當偶像", effect: { knowledge: 0, happy: 3, money: 0 } },
-          { text: "拚命補習考大學", effect: { knowledge: 3, happy: -1, money: -1 } },
-          { text: "打工存錢買機車", effect: { knowledge: 1, happy: 1, money: 3 } }
-        ]
-      }
-    ];
+const storyData = [
+  {
+    text: "你是個國小生。今天放學後你決定...",
+    options: [
+      { text: "狂打電動12小時", effect: { knowledge: 0, happy: 3, money: -1 } },
+      { text: "回家寫作業配抄答案", effect: { knowledge: 2, happy: 0, money: 1 } },
+      { text: "做家事跟媽媽要零用錢", effect: { knowledge: 1, happy: 1, money: 3 } }
+    ]
+  },
+  {
+    text: "你參加了校外才藝班，決定學習...",
+    options: [
+      { text: "鋼琴", effect: { knowledge: 2, happy: 1, money: -1 } },
+      { text: "籃球", effect: { knowledge: 1, happy: 2, money: -1 } },
+      { text: "沒興趣，不去", effect: { knowledge: 0, happy: 0, money: 2 } }
+    ]
+  },
+  {
+    text: "國高中時，你的志向是...",
+    options: [
+      { text: "想當偶像", effect: { knowledge: 0, happy: 3, money: 0 } },
+      { text: "拚命補習考大學", effect: { knowledge: 3, happy: -1, money: -1 } },
+      { text: "打工存錢買機車", effect: { knowledge: 1, happy: 1, money: 3 } }
+    ]
+  },
+  {
+    text: "高三時，面對大考壓力你選擇...",
+    options: [
+      { text: "拼命讀書", effect: { knowledge: 3, happy: -1, money: 0 } },
+      { text: "打手遊放鬆心情", effect: { knowledge: 0, happy: 2, money: -1 } },
+      { text: "做菜轉移注意力", effect: { knowledge: 1, happy: 2, money: 0 } }
+    ]
+  },
+  {
+    text: "大學選系時你選擇...",
+    options: [
+      { text: "聽爸媽的選熱門科系", effect: { knowledge: 2, happy: 0, money: 2 } },
+      { text: "選自己熱愛的藝術系", effect: { knowledge: 1, happy: 3, money: -1 } },
+      { text: "隨便亂選一個系", effect: { knowledge: 0, happy: 0, money: 1 } }
+    ]
+  },
+  {
+    text: "你在大學中最常做的事是...",
+    options: [
+      { text: "參加社團交朋友", effect: { knowledge: 1, happy: 3, money: -1 } },
+      { text: "打工賺生活費", effect: { knowledge: 1, happy: 1, money: 2 } },
+      { text: "整天宅在宿舍", effect: { knowledge: 0, happy: 0, money: 1 } }
+    ]
+  },
+  {
+    text: "大學畢業後你決定...",
+    options: [
+      { text: "出國進修", effect: { knowledge: 3, happy: 1, money: -3 } },
+      { text: "直接找工作", effect: { knowledge: 1, happy: 1, money: 2 } },
+      { text: "gap year環遊世界", effect: { knowledge: 1, happy: 3, money: -2 } }
+    ]
+  },
+  {
+    text: "第一份工作的選擇...",
+    options: [
+      { text: "薪水高但壓力大", effect: { knowledge: 2, happy: -1, money: 3 } },
+      { text: "夢想職業但薪水低", effect: { knowledge: 2, happy: 3, money: -1 } },
+      { text: "臨時工作先混日子", effect: { knowledge: 0, happy: 1, money: 1 } }
+    ]
+  },
+  {
+    text: "工作幾年後你打算...",
+    options: [
+      { text: "創業試試看", effect: { knowledge: 2, happy: 2, money: -2 } },
+      { text: "繼續升遷拚高薪", effect: { knowledge: 3, happy: 0, money: 2 } },
+      { text: "轉職做自己喜歡的事", effect: { knowledge: 1, happy: 3, money: -1 } }
+    ]
+  },
+  {
+    text: "你退休後決定...",
+    options: [
+      { text: "環遊世界", effect: { knowledge: 1, happy: 3, money: -2 } },
+      { text: "含飴弄孫過日子", effect: { knowledge: 1, happy: 2, money: 1 } },
+      { text: "再去讀書充實自己", effect: { knowledge: 3, happy: 1, money: -1 } }
+    ]
+  }
+];
 
     let currentStep = 0;
     let stats = { knowledge: 0, happy: 0, money: 0 };
